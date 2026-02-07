@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Header from './components/Header';
+import Hero from './components/Hero';
 
 
 function App() {
@@ -17,13 +18,9 @@ function App() {
   if (!content) return null;
 
   return (
-    <div className="">
-      {/* 1. BÖLÜM: Header ve Hero (Senin planına göre bunlar iç içe veya ardışık) */}
+    <div>
       <Header />
-      <main className="">
-        {/* Buraya Hero, Skills, Profile, Projects gelecek */}
-        {/* Şu an sadece her şeyi temizleyip Header'ı görmek için burayı boş bırakıyoruz. */}
-      </main>
+      <Hero />
     </div>
   );
 }

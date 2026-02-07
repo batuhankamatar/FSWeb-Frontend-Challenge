@@ -15,7 +15,7 @@ function Header() {
   };
 
   return (
-    <header className="header-container flex flex-row w-full h-auto justify-end py-8">
+    <header className={`header-container flex flex-row w-full h-auto justify-end py-8 transition-colors duration-300 ${darkMode ? 'bg-[#2A2A2A]' : 'bg-[#F4F4F4]'}`}>
       <div className="header-content-wrapper flex flex-row w-full max-w-[359px] ml-auto mr-0 items-center gap-[14px]">
 
         {/* Dark Mode Switch Alanı */}
@@ -35,32 +35,32 @@ function Header() {
             <div className={`mode-switch-circle absolute w-[16px] h-[16px] ml-[4.4px] rounded-full transition-all duration-300 ${darkMode ? 'translate-x-[30px] bg-[#FFE86E]' : 'translate-x-0 bg-[#FFE86E]'}`}></div>
           </label>
 
-          <span className="font-Inter font-[700] text-[15px]">
+          <span className={`font-Inter font-[700] text-[15px] ${darkMode ? 'text-[#D9D9D9]' : 'text-[#777777]'}`}>
             {darkMode ? 'LIGHT MODE' : 'DARK MODE'}
           </span>
         </div>
 
-        <span className="font-Inter font-[700] text-[15px]">  |  </span>
+        <span className={`font-Inter font-[700] text-[15px] ${darkMode ? 'text-[#D9D9D9]' : 'text-[#777777]'}`}>  |  </span>
 
         {/* Dil Değiştirme Alanı */}
         <div className="language-container font-Inter font-[700] text-[15px]">
           {language === 'tr' ? (
-            <p className="language-text text-[#777777]">
+            <p className={`language-text ${darkMode ? 'text-[#D9D9D9]' : 'text-[#777777]'}`}>
               SWITCH TO{" "}
               <span
                 onClick={toggleLanguage}
                 role="button"
-                className="language-button font-Inter font-[700] text-[15px] cursor-pointer"
+                className={`language-button font-Inter font-[700] text-[15px] cursor-pointer ${darkMode ? 'text-[#B7AAFF]' : 'text-[#E92577]'}`}
               >
                 ENGLISH
               </span>
             </p>
           ) : (
-            <p className="language-text text-[#777777]">
+            <p className={`language-text ${darkMode ? 'text-[#D9D9D9]' : 'text-[#777777]'}`}>
               <span
                 onClick={toggleLanguage}
                 role="button"
-                className="language-button font-Inter font-[700] text-[15px] cursor-pointer"
+                className={`language-button font-Inter font-[700] text-[15px] cursor-pointer ${darkMode ? 'text-[#B7AAFF]' : 'text-[#E92577]'}`}
               >
                 TÜRKÇE
               </span>
