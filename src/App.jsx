@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Skills from './components/Skills';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
     <div>
       <Header />
       <Hero />
+      <Skills />
     </div>
   );
 }
