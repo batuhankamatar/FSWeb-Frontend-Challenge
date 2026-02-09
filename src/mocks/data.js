@@ -1,100 +1,170 @@
 export const data = {
   tr: {
+    header: {
+      darkMode: "KOYU TEMA",
+      lightMode: "AYDINLIK TEMA",
+      languageSwitch: "ENGLISH",
+      languageText: "'YE GEÇ"
+    },
+    toast: {
+      welcome: "🚀 Hoş geldiniz!",
+      langChange: "🌐 Dil: Türkçe",
+      darkOn: "🌙 Koyu Tema",
+      darkOff: "☀️ Aydınlık Tema"
+    },
     hero: {
-      hi: "Merhaba! 👋",
-      title: "Ben Almila. Full-stack geliştiriciyim. Sağlam ve ölçeklenebilir frontend ürünleri oluşturabilirim. Tanışalım!",
-      description: "Şu an UX, UI ve Web Tasarım projesi için freelance çalışıyorum. Beni ekibinize davet etmek isterseniz -> pratamalosi@gmail.com",
+      greeting: "Merhaba! 👋",
+      introduction: "Ben Batuhan. Frontend dünyasında sağlam ve dinamik kullanıcı deneyimleri kurguluyorum. Güncel teknolojileri kullanarak yüksek standartlarda web ürünleri geliştiriyorum. Tanışalım!",
+      description: {
+        status: "Şu an ",
+        job: "Modern Web Uygulamaları",
+        for: " ve ",
+        project: "Kullanıcı Deneyimi",
+        invite: " odaklı projeler geliştiriyorum. Beni ekibinize davet etmek isterseniz: ",
+        email: "kamatar3@gmail.com"
+      }
     },
     skills: {
       title: "Yetenekler",
       list: [
-        { name: "JAVASCRIPT", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" },
-        { name: "REACT", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" },
-        { name: "REDUX", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" },
+        { name: "JAVASCRIPT", icon: "/src/images/js-logo.png" },
+        { name: "REACT", icon: "/src/images/react-logo.png" },
+        { name: "REDUX", icon: "/src/images/redux-logo.png" },
+        { name: "TANSTACK", icon: "/src/images/tanStack-logo.png" },
+        { name: "VS CODE", icon: "/src/images/vs-logo.png" },
+        { name: "FIGMA", icon: "/src/images/figma-logo.png" },
       ]
     },
     profile: {
       title: "Profil",
       basicInfoTitle: "Temel Bilgiler",
       basicInfo: [
-        { label: "Doğum Tarihi", value: "24.03.1996" },
-        { label: "İkamet Şehri", value: "Ankara" },
-        { label: "Eğitim Durumu", value: "Hacettepe Ünv. Biyoloji Lisans, 2016" },
+        { label: "Doğum Tarihi", value: "23.11.1996" },
+        { label: "İkamet Şehri", value: "İzmir" },
+        { label: "Eğitim Durumu", value: "Workintech - Fullstack Pro, 2026 / Balıkesir Ünv. Turizm Rehberliği Lisans, 2020" },
         { label: "Tercih Ettiği Rol", value: "Frontend, UI" },
       ],
       aboutMeTitle: "Hakkımda",
-      aboutMe: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia. Minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!"
+      aboutMe1: "Balıkesir Üniversitesi'nde Turizm Rehberliği alanında lisans eğitimimi tamamladım. Frontend Developer olarak; React, Javascript, Redux, Tailwind ve Cypress.io gibi modern araçlarla çalışarak yazılım geliştirme süreçlerini optimize etmeye odaklanıyorum.",
+      aboutMe2: "Workintech'in FullstackPro bootcamp programından edindiğim yazılım deneyimi ile çeşitli projelere katkıda bulundum. Hedefim, teknik becerilerimi daha da geliştirerek yenilikçi çözümler sunmaya devam etmek."
     },
     projects: {
       title: "Projeler",
+      viewOnGithub: "Github'da Görüntüle",
+      goToApp: "Uygulamaya Git →",
       list: [
         {
-          title: "Random Jokes",
-          description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
-          tags: ["react", "vercel", "axios", "router"],
-          github: "Github'da Görüntüle",
-          app: "Uygulamaya Git",
-          image: "https://i.ibb.co/Q63Mjq1/gratitude.jpg"
-        }
+          title: "Teknolojik Yemekler",
+          description: "Dinamik form yönetimi ve gerçek zamanlı doğrulama içeren kapsamlı bir yemek sipariş uygulaması. Pizza özelleştirmeleri için karmaşık state yönetimini gerçekleştirmek ve sipariş işlemleri için API entegrasyonu sunmak amacıyla geliştirilmiştir.",
+          technologies: ["react", "axios", "router", "tailwind", "cypress"],
+          githubLink: "#",
+          appLink: "#",
+          bgColor: "bg-[#DDEEFE]",
+          image: "/src/images/project-one.png"
+        },
+        {
+          title: "Teknolojik Yemekler",
+          description: "Dinamik form yönetimi ve gerçek zamanlı doğrulama içeren kapsamlı bir yemek sipariş uygulaması. Pizza özelleştirmeleri için karmaşık state yönetimini gerçekleştirmek ve sipariş işlemleri için API entegrasyonu sunmak amacıyla geliştirilmiştir.",
+          technologies: ["react", "axios", "router", "tailwind", "cypress"],
+          githubLink: "#",
+          appLink: "#",
+          bgColor: "bg-[#DDEEFE]",
+          image: "/src/images/project-one.png"
+        },
+        // Diğer projeler buraya eklenecek
       ]
     },
     footer: {
-      title: "Bir sonraki projenizde birlikte çalışalım.",
+      message: "Bir sonraki projeniz üstünde birlikte çalışalım.",
       links: [
-        { name: "Github", url: "https://github.com/senin-kullanici-adin" },
-        { name: "Kişisel Blog", url: "#" },
-        { name: "Linkedin", url: "https://linkedin.com/in/senin-profilin" },
-        { name: "E-posta", url: "mailto:pratamalosi@gmail.com" },
+        { name: "Github", url: "https://github.com/...", color: "text-[#171043]" },
+        { name: "Linkedin", url: "https://linkedin.com/...", color: "text-[#0077B5]" },
+        { name: "E-posta", url: "mailto:ismin@domain.com", color: "text-[#AF0C48]" }
       ]
     }
   },
   en: {
+    header: {
+      darkMode: "DARK MODE",
+      lightMode: "LIGHT MODE",
+      languageSwitch: "TÜRKÇE",
+      languageText: "SWITCH TO "
+    },
+    toast: {
+      welcome: "🚀 Welcome back!",
+      langChange: "🌐 Language: English",
+      darkOn: "🌙 Dark Mode",
+      darkOff: "☀️ Light Mode"
+    },
     hero: {
-      hi: "Hi! 👋",
-      title: "I’m Almila. I’m a full-stack developer. I can craft solid and scalable frontend products. Let’s meet!",
-      description: "Currently Freelancing for UX, UI, & Web Design Project. Invite me to join your team -> pratamalosi@gmail.com",
+      greeting: "Hi! 👋",
+      introduction: "I’m Batuhan. I build robust and dynamic user experiences in the frontend world. I develop high-standard web products using up-to-date technologies. Let’s meet!",
+      description: {
+        status: "Currently developing projects focused on ",
+        job: "Modern Web Applications",
+        for: " and ",
+        project: "User Experience.",
+        invite: "If you'd like to invite me to your team: ",
+        email: "kamatar3@gmail.com"
+      }
     },
     skills: {
       title: "Skills",
       list: [
-        { name: "JAVASCRIPT", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" },
-        { name: "REACT", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" },
-        { name: "REDUX", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" },
+        { name: "JAVASCRIPT", icon: "/src/images/js-logo.png" },
+        { name: "REACT", icon: "/src/images/react-logo.png" },
+        { name: "REDUX", icon: "/src/images/redux-logo.png" },
+        { name: "TANSTACK", icon: "/src/images/tanStack-logo.png" },
+        { name: "VS CODE", icon: "/src/images/vs-logo.png" },
+        { name: "FIGMA", icon: "/src/images/figma-logo.png" },
       ]
     },
     profile: {
       title: "Profile",
       basicInfoTitle: "Basic Information",
       basicInfo: [
-        { label: "Birth Date", value: "24.03.1996" },
-        { label: "City", value: "Ankara" },
-        { label: "Education", value: "Hacettepe Unv. Biology Bachelor, 2016" },
+        { label: "Birth Date", value: "23.11.1996" },
+        { label: "City", value: "Izmir" },
+        { label: "Education", value: "Workintech - Fullstack Pro, 2026 / Balikesir Unv. Tourism Guidance Bachelor, 2020" },
         { label: "Preferred Role", value: "Frontend, UI" },
       ],
       aboutMeTitle: "About me",
-      aboutMe: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia. Minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!"
+      aboutMe1: "I completed my undergraduate education in Tourism Guidance at Balıkesir University. As a Frontend Developer, I focus on optimizing software development processes by working with modern tools such as React, Javascript, Redux, Tailwind, and Cypress.io.",
+      aboutMe2: "I have contributed to various projects with the software experience I gained from Workintech's FullstackPro bootcamp program. My goal is to continue providing innovative solutions by further developing my technical skills.",
     },
     projects: {
       title: "Projects",
+      viewOnGithub: "View on Github",
+      goToApp: "Go to app →",
       list: [
         {
-          title: "Random Jokes",
-          description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
-          tags: ["react", "vercel", "axios", "router"],
-          github: "View on Github",
-          app: "Go to app",
-          image: "https://i.ibb.co/Q63Mjq1/gratitude.jpg"
-        }
+          title: "Pizza Planet",
+          description: "A comprehensive food delivery application featuring a dynamic order form with real-time validation. Built to handle complex state management for pizza customizations and integrated with a mock API for order processing.",
+          technologies: ["react", "axios", "router", "tailwind", "cypress"],
+          githubLink: "#",
+          appLink: "#",
+          bgColor: "bg-[#DDEEFE]",
+          image: "/src/images/project-one.png"
+        },
+        {
+          title: "Pizza Planet",
+          description: "A comprehensive food delivery application featuring a dynamic order form with real-time validation. Built to handle complex state management for pizza customizations and integrated with a mock API for order processing.",
+          technologies: ["react", "axios", "router", "tailwind", "cypress"],
+          githubLink: "#",
+          appLink: "#",
+          bgColor: "bg-[#DDEEFE]",
+          image: "/src/images/project-one.png"
+        },
+        // Diğer projeler buraya
       ]
     },
     footer: {
-      title: "Let’s work together on your next product.",
+      message: "Let’s work together on your next product.",
       links: [
-        { name: "Github", url: "https://github.com/senin-kullanici-adin" },
-        { name: "Personal Blog", url: "#" },
-        { name: "Linkedin", url: "https://linkedin.com/in/senin-profilin" },
-        { name: "Email", url: "mailto:pratamalosi@gmail.com" },
+        { name: "Github", url: "https://github.com/...", color: "text-[#171043]" },
+        { name: "Linkedin", url: "https://linkedin.com/...", color: "text-[#0077B5]" },
+        { name: "Email", url: "mailto:ismin@domain.com", color: "text-[#AF0C48]" }
       ]
-    }
+    },
   }
 };

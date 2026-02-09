@@ -1,24 +1,38 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import useLocalStorage from '../hooks/useLocalStorage';
+import { toast } from 'react-toastify';
 
 function Header() {
-  const { language, darkMode } = useSelector((state) => state);
+  const darkMode = useSelector((state) => state.darkMode);
+  const language = useSelector((state) => state.language);
+  const content = useSelector((state) => state.content);
   const dispatch = useDispatch();
+
+  const [, setLangStorage] = useLocalStorage('language', 'en');
+  const [, setDarkStorage] = useLocalStorage('darkMode', false);
+
+  if (!content) return null;
 
   const toggleLanguage = () => {
     const newLang = language === 'tr' ? 'en' : 'tr';
+    setLangStorage(newLang);
     dispatch({ type: 'SET_LANGUAGE', payload: newLang });
+
+    toast(content.toast.langChange);
   };
 
   const toggleDarkMode = () => {
-    dispatch({ type: 'TOGGLE_DARK_MODE' });
+    const newDarkMode = !darkMode;
+    setDarkStorage(newDarkMode);
+    dispatch({ type: 'TOGGLE_DARK_MODE', payload: newDarkMode });
+
+    toast(newDarkMode ? content.toast.darkOn : content.toast.darkOff);
   };
 
   return (
     <header className={`header-container flex flex-row w-full h-auto justify-end py-8 transition-colors duration-300 ${darkMode ? 'bg-[#2A2A2A]' : 'bg-[#F4F4F4]'}`}>
       <div className="header-content-wrapper flex flex-row w-full max-w-[359px] ml-auto mr-0 items-center gap-[14px]">
-
-        {/* Dark Mode Switch Alanı */}
         <div className="mode-switch-container flex items-center gap-[4px]">
           <input
             type="checkbox"
@@ -27,35 +41,19 @@ function Header() {
             checked={darkMode}
             className="hidden"
           />
-
           <label
             htmlFor="darkModeToggle"
             className={`mode-switch-label w-[55px] h-[24px] rounded-full relative cursor-pointer flex items-center transition-colors duration-300 ${darkMode ? 'bg-[#3A3A3A]' : 'bg-[#E92577]'}`}
           >
             <div className={`mode-switch-circle absolute w-[16px] h-[16px] ml-[4.4px] rounded-full transition-all duration-300 ${darkMode ? 'translate-x-[30px] bg-[#FFE86E]' : 'translate-x-0 bg-[#FFE86E]'}`}></div>
           </label>
-
           <span className={`font-Inter font-[700] text-[15px] ${darkMode ? 'text-[#D9D9D9]' : 'text-[#777777]'}`}>
-            {darkMode ? 'LIGHT MODE' : 'DARK MODE'}
+            {darkMode ? content.header.lightMode : content.header.darkMode}
           </span>
         </div>
-
         <span className={`font-Inter font-[700] text-[15px] ${darkMode ? 'text-[#D9D9D9]' : 'text-[#777777]'}`}>  |  </span>
-
-        {/* Dil Değiştirme Alanı */}
         <div className="language-container font-Inter font-[700] text-[15px]">
           {language === 'tr' ? (
-            <p className={`language-text ${darkMode ? 'text-[#D9D9D9]' : 'text-[#777777]'}`}>
-              SWITCH TO{" "}
-              <span
-                onClick={toggleLanguage}
-                role="button"
-                className={`language-button font-Inter font-[700] text-[15px] cursor-pointer ${darkMode ? 'text-[#B7AAFF]' : 'text-[#E92577]'}`}
-              >
-                ENGLISH
-              </span>
-            </p>
-          ) : (
             <p className={`language-text ${darkMode ? 'text-[#D9D9D9]' : 'text-[#777777]'}`}>
               <span
                 onClick={toggleLanguage}
@@ -66,9 +64,19 @@ function Header() {
               </span>
               'YE GEÇ
             </p>
+          ) : (
+            <p className={`language-text ${darkMode ? 'text-[#D9D9D9]' : 'text-[#777777]'}`}>
+              SWITCH TO{" "}
+              <span
+                onClick={toggleLanguage}
+                role="button"
+                className={`language-button font-Inter font-[700] text-[15px] cursor-pointer ${darkMode ? 'text-[#B7AAFF]' : 'text-[#E92577]'}`}
+              >
+                ENGLISH
+              </span>
+            </p>
           )}
         </div>
-
       </div>
     </header>
   );

@@ -1,9 +1,11 @@
-import { data } from "../mocks/data";
+import { data as localData } from "../mocks/data";
 
 const initialState = {
   language: 'en',
   darkMode: false,
-  content: data.en
+  content: null,
+  loading: true,
+  error: null
 };
 
 export const reducer = (state = initialState, action) => {
@@ -12,12 +14,26 @@ export const reducer = (state = initialState, action) => {
       return {
         ...state,
         language: action.payload,
-        content: data[action.payload]
+        content: state.allData ? state.allData[action.payload] : null
+      };
+    case 'FETCH_SUCCESS':
+      return {
+        ...state,
+        allData: action.payload,
+        content: action.payload[state.language],
+        loading: false
+      };
+    case 'FETCH_ERROR':
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+        content: localData[state.language]
       };
     case 'TOGGLE_DARK_MODE':
       return {
         ...state,
-        darkMode: !state.darkMode
+        darkMode: action.payload
       };
     default:
       return state;

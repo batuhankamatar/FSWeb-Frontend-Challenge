@@ -1,19 +1,25 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { data } from '../mocks/data';
 
 function Hero() {
-  const { darkMode, language } = useSelector((state) => state);
+  const darkMode = useSelector((state) => state.darkMode);
+  const language = useSelector((state) => state.language);
+
+  const heroContent = data[language].hero;
 
   return (
-    <section className={`hero-container flex w-full h-auto pt-[30px] justify-center md:pt-[50px] lg:w-full lg:h-[578px] lg:pt-[50px] transition-colors duration-300 ${darkMode ? 'bg-[#2A2A2A]' : 'bg-[#F4F4F4]'}`}>
+    <section className={`hero-container flex w-full h-auto pt-[30px] pb-[50px] justify-center md:pt-[50px] lg:w-full lg:h-auto lg:pt-[50px] transition-colors duration-300 ${darkMode ? 'bg-[#2A2A2A]' : 'bg-[#F4F4F4]'}`}>
 
-      <div className='hero-content flex flex-col w-full max-w-[400px] h-auto gap-[40px] md:w-full md:max-w-[700px] md:h-auto md:items-center lg:w-full lg:max-w-[1107px] lg:h-[493px] lg:flex-row lg:justify-between'>
+      <div className='hero-content flex flex-col w-full max-w-[400px] h-auto gap-[40px] md:w-full md:max-w-[700px] md:h-auto md:items-center lg:w-full lg:max-w-[1107px] lg:h-auto lg:flex-row lg:justify-between'>
 
-        <div className='left-content-top w-full h-auto gap-[50px] flex flex-col order-last items-center lg:items-start lg:order-first lg:w-full lg:max-w-[666px] lg:h-auto lg:gap-[21px]'>
-          <div className='left-content-top flex flex-col'>
-            <span className={`font-Inter text-center font-[400] text-[25px] md:font-[400] md:text-[30px] lg:font-[400] lg:text-[30px] lg:text-left ${darkMode ? 'text-[#AEBCCF]' : 'text-[#1F2937]'}`}>Hi! 👋</span>
-            <h1 className={`font-Inter font-[500] text-[42px] md:text-center lg:text-left ${darkMode ? 'text-[#AEBCCF]' : 'text-[#1F2937]'}`}>
-              I’m Almila. I’m a full-stack developer. I can craft solid and scalable frontend products. Let’s meet!
+        <div className='left-content w-full h-auto gap-[50px] flex flex-col order-last items-center lg:items-start lg:order-first lg:w-full lg:max-w-[666px] lg:h-auto lg:gap-[50px]'>
+          <div className='left-content-top flex flex-col gap-[15px] lg:gap-[30px] '>
+            <span className={`font-Inter text-center font-[400] text-[25px] md:font-[400] md:text-[30px] lg:font-[400] lg:text-[30px] lg:text-left ${darkMode ? 'text-[#AEBCCF]' : 'text-[#1F2937]'}`}>
+              {heroContent.greeting}
+            </span>
+            <h1 className={`font-Inter font-[500] text-[30px] lg:text-[35px] text-center lg:text-left ${darkMode ? 'text-[#AEBCCF]' : 'text-[#1F2937]'}`}>
+              {heroContent.introduction}
             </h1>
           </div>
 
@@ -31,10 +37,21 @@ function Hero() {
               />
             </nav>
 
-            <div className={`bottom-info font-Inter font-[400] text-[18px] ${darkMode ? 'text-white' : 'text-black'}`}>
-              <p className='lg:w-auto lg:max-w[540px] md:text-center lg:text-left'>
-                Currently <span className={darkMode ? 'text-[#E1E1E1]' : 'text-[#AF0C48]'}>Freelancing</span> for <span className={darkMode ? 'text-[#E1E1E1]' : 'text-[#AF0C48]'}>UX, UI, & Web Design</span> Project. <br />
-                Invite me to join your team: <span className="text-[#AF0C48] dark:text-[#B7AAFF] underline">pratamaiosi@gmail.com</span>
+            <div className={`bottom-info font-Inter font-[400] text-[16px] lg:text-[18px] ${darkMode ? 'text-white' : 'text-black'}`}>
+              <p className='lg:w-auto lg:max-w[540px] text-center lg:text-left'>
+                {heroContent.description.status}
+                <span className={darkMode ? 'text-[#E1E1E1]' : 'text-[#AF0C48]'}>
+                  {heroContent.description.job}
+                </span>
+                {heroContent.description.for}
+                <span className={darkMode ? 'text-[#E1E1E1]' : 'text-[#AF0C48]'}>
+                  {heroContent.description.project}
+                </span>
+                <br />
+                {heroContent.description.invite}
+                <span className="text-[#AF0C48] dark:text-[#B7AAFF] underline">
+                  {heroContent.description.email}
+                </span>
               </p>
             </div>
           </div>
