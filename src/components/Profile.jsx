@@ -11,7 +11,7 @@ function Profile() {
   return (
     <section className={`profile-container flex flex-col items-center lg:w-full lg:h-auto transition-colors duration-300 ${darkMode ? 'bg-[#2A262B]' : 'bg-[#F4F4F4]'}`}>
       <img
-        src="./src/images/profile-rectangle.png"
+        src="/images/profile-rectangle.png"
         alt="background-decoration"
         className="absolute hidden lg:block right-[830px] top-[1433px] w-[90px] h-[18px] z-0 object-contain"
       />
@@ -20,25 +20,21 @@ function Profile() {
           {profileContent.title}
         </h2>
         <div className='profile-info flex flex-col gap-[36px] md:items-center md:gap-[65px] lg:flex-row lg:w-full lg:max-w-[1031px] lg:h-auto lg:gap-[47px] lg:pb-[81px] '>
-          <div className={`basic-info flex flex-col p-8 rounded-[12px] gap-[33px] md:w-full md:max-w-[400px] md:gap-[33px] lg:gap-[33px] lg:w-full lg:min-w-[508px] lg:h-auto shadow-[10px_10px_0px_0px_#52525280] ${darkMode ? 'bg-[#525252]' : 'bg-white'}`}>
+          <div className={`basic-info flex flex-col p-8 rounded-[12px] gap-[33px] md:w-full md:max-w-[400px] lg:w-full lg:min-w-[508px] lg:h-auto shadow-[10px_10px_0px_0px_#52525280] ${darkMode ? 'bg-[#525252]' : 'bg-white'}`}>
             <h3 className={`font-['Playfair_Display'] font-[400] text-[24px] ${darkMode ? 'text-[#EA2678]' : 'text-[#EA2678]'}`}>
               {profileContent.basicInfoTitle}
             </h3>
-            <div className="flex flex-row gap-[22px]">
-              <div className="flex flex-col w-full max-w-[139px] gap-4">
-                {profileContent.basicInfo.map((info, index) => (
-                  <span key={`label-${index}`} className={`font-Inter font-[600] text-[18px] ${darkMode ? 'text-white' : 'text-black'}`}>
+            <div className="flex flex-col gap-4">
+              {profileContent.basicInfo.map((info, index) => (
+                <div key={index} className="flex flex-row gap-[22px]">
+                  <span className={`font-Inter font-[600] text-[18px] w-full max-w-[139px] ${darkMode ? 'text-white' : 'text-black'}`}>
                     {info.label}
                   </span>
-                ))}
-              </div>
-              <div className="flex flex-col w-full gap-4">
-                {profileContent.basicInfo.map((info, index) => (
-                  <span key={`value-${index}`} className={`font-Inter font-[400] text-[18px] ${darkMode ? 'text-white' : 'text-black'}`}>
+                  <span className={`font-Inter font-[400] text-[18px] w-full ${darkMode ? 'text-white' : 'text-black'}`}>
                     {info.value}
                   </span>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
           <div className='about-me flex flex-col gap-4 md:px-[75px] lg:px-0'>

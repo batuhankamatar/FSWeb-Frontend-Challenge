@@ -11,12 +11,12 @@ function Skills() {
   return (
     <section className={`skills-container flex flex-col items-center lg:w-full lg:h-[490px] transition-colors duration-300 ${darkMode ? 'bg-[#484148]' : 'bg-white'}`}>
       <img
-        src="./src/images/skills-rectangle.png"
+        src="/images/skills-rectangle.png"
         alt="background-decoration"
         className="absolute hidden lg:block left-[-45px] top-[1150px] w-[181px] h-[49px] z-0 object-contain"
       />
       <img
-        src="./src/images/hollow-circle-pink.png"
+        src="/images/hollow-circle-pink.png"
         alt="background-decoration"
         className="absolute hidden lg:block right-[-25px] top-[1200px] w-[121px] h-[121px] z-0 object-contain"
       />

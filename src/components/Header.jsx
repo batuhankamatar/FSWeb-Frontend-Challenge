@@ -33,7 +33,7 @@ function Header() {
   return (
     <header className={`header-container flex flex-row w-full h-auto py-8 justify-end transition-colors duration-300 ${darkMode ? 'bg-[#2A262B]' : 'bg-[#F4F4F4]'}`}>
       <img
-        src="./src/images/header-circle.png"
+        src="/images/header-circle.png"
         alt="header-desktop-img"
         className="hidden lg:block absolute w-[111px] h-[111px] object-contain left-[600px] top-[-40px]"
       />

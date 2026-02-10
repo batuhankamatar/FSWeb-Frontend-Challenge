@@ -26,14 +26,14 @@ export const data = {
           {
             name: "linkedin",
             url: "https://www.linkedin.com/in/batuhan-kamatar-6a78641ba/",
-            img: "./src/images/linkedIn.png",
-            imgDark: "./src/images/linkedIn-dark.png"
+            img: "/images/linkedIn.png",
+            imgDark: "/images/linkedIn-dark.png"
           },
           {
             name: "github",
             url: "https://github.com/batuhankamatar",
-            img: "./src/images/github.png",
-            imgDark: "./src/images/github-dark.png"
+            img: "/images/github.png",
+            imgDark: "/images/github-dark.png"
           }
         ]
       }
@@ -41,12 +41,12 @@ export const data = {
     skills: {
       title: "Yetenekler",
       list: [
-        { name: "JAVASCRIPT", icon: "/src/images/js-logo.png" },
-        { name: "REACT", icon: "/src/images/react-logo.png" },
-        { name: "REDUX", icon: "/src/images/redux-logo.png" },
-        { name: "TANSTACK", icon: "/src/images/tanStack-logo.png" },
-        { name: "VS CODE", icon: "/src/images/vs-logo.png" },
-        { name: "FIGMA", icon: "/src/images/figma-logo.png" },
+        { name: "JAVASCRIPT", icon: "/images/js-logo.png" },
+        { name: "REACT", icon: "/images/react-logo.png" },
+        { name: "REDUX", icon: "/images/redux-logo.png" },
+        { name: "TANSTACK", icon: "/images/tanStack-logo.png" },
+        { name: "VS CODE", icon: "/images/vs-logo.png" },
+        { name: "FIGMA", icon: "/images/figma-logo.png" },
       ]
     },
     profile: {
@@ -71,23 +71,22 @@ export const data = {
           title: "Teknolojik Yemekler",
           description: "Dinamik form yönetimi ve gerçek zamanlı doğrulama içeren kapsamlı bir yemek sipariş uygulaması. Pizza özelleştirmeleri için karmaşık state yönetimini gerçekleştirmek ve sipariş işlemleri için API entegrasyonu sunmak amacıyla geliştirilmiştir.",
           technologies: ["react", "axios", "router", "tailwind", "cypress"],
-          githubLink: "#",
-          appLink: "#",
+          githubLink: "https://github.com/batuhankamatar/pizza-ordering-react-project",
+          appLink: "https://pizza-ordering-react-project.vercel.app",
           bgColor: "bg-[#DDEEFE]",
           darkBgColor: "bg-[#2D3235]",
-          image: "/src/images/project-one.png"
+          image: "/images/project-one.png"
         },
         {
           title: "Movie Database v3",
           description: "Eski bir film veri tabanı uygulamasının modern isterlerle yeniden inşa edilmiş versiyonu. CRUD operasyonları, dinamik form yönetimi, favorilere ekleme sistemi ve local storage destekli kapsamlı bir yönetim paneli projesi.",
           technologies: ["React", "Redux", "Axios", "Router", "LocalStorage"],
-          githubLink: "#", // Burayı sonra doldurabilirsin
-          appLink: "#",    // Burayı sonra doldurabilirsin
+          githubLink: "https://github.com/batuhankamatar/CRUD-movie-project",
+          appLink: "https://crud-movie-project.vercel.app",
           bgColor: "bg-[#D9F6F1]",
           darkBgColor: "bg-[#495351]",
-          image: "/src/images/project-two.png"
+          image: "/images/project-two.png"
         }
-        // Diğer projeler buraya eklenecek
       ]
     },
     footer: {
@@ -141,14 +140,14 @@ export const data = {
           {
             name: "linkedin",
             url: "https://www.linkedin.com/in/batuhan-kamatar-6a78641ba/",
-            img: "./src/images/linkedIn.png",
-            imgDark: "./src/images/linkedIn-dark.png"
+            img: "/images/linkedIn.png",
+            imgDark: "/images/linkedIn-dark.png"
           },
           {
             name: "github",
             url: "https://github.com/batuhankamatar",
-            img: "./src/images/github.png",
-            imgDark: "./src/images/github-dark.png"
+            img: "/images/github.png",
+            imgDark: "/images/github-dark.png"
           }
         ]
       }
@@ -156,12 +155,12 @@ export const data = {
     skills: {
       title: "Skills",
       list: [
-        { name: "JAVASCRIPT", icon: "/src/images/js-logo.png" },
-        { name: "REACT", icon: "/src/images/react-logo.png" },
-        { name: "REDUX", icon: "/src/images/redux-logo.png" },
-        { name: "TANSTACK", icon: "/src/images/tanStack-logo.png" },
-        { name: "VS CODE", icon: "/src/images/vs-logo.png" },
-        { name: "FIGMA", icon: "/src/images/figma-logo.png" },
+        { name: "JAVASCRIPT", icon: "/images/js-logo.png" },
+        { name: "REACT", icon: "/images/react-logo.png" },
+        { name: "REDUX", icon: "/images/redux-logo.png" },
+        { name: "TANSTACK", icon: "/images/tanStack-logo.png" },
+        { name: "VS CODE", icon: "/images/vs-logo.png" },
+        { name: "FIGMA", icon: "/images/figma-logo.png" },
       ]
     },
     profile: {
@@ -186,23 +185,22 @@ export const data = {
           title: "Pizza Planet",
           description: "A comprehensive food delivery application featuring a dynamic order form with real-time validation. Built to handle complex state management for pizza customizations and integrated with a mock API for order processing.",
           technologies: ["react", "axios", "router", "tailwind", "cypress"],
-          githubLink: "#",
-          appLink: "#",
+          githubLink: "https://github.com/batuhankamatar/pizza-ordering-react-project",
+          appLink: "https://pizza-ordering-react-project.vercel.app",
           bgColor: "bg-[#DDEEFE]",
           darkBgColor: "bg-[#2D3235]",
-          image: "/src/images/project-one.png"
+          image: "/images/project-one.png"
         },
         {
           title: "Movie Database v3",
           description: "A modernized version of a legacy movie database application. Features full CRUD operations, dynamic form handling for adding and editing movies, a favorite management system, and custom hook-based dark mode persistence with local storage.",
           technologies: ["React", "Redux", "Axios", "Router", "LocalStorage"],
-          githubLink: "#",
-          appLink: "#",
+          githubLink: "https://github.com/batuhankamatar/CRUD-movie-project",
+          appLink: "https://crud-movie-project.vercel.app",
           bgColor: "bg-[#D9F6F1]",
           darkBgColor: "bg-[#495351]",
-          image: "/src/images/project-two.png"
+          image: "/images/project-two.png"
         }
-        // Diğer projeler buraya
       ]
     },
     footer: {

@@ -12,12 +12,12 @@ function Hero() {
   return (
     <section className={`hero-container flex w-full h-auto pt-[30px] pb-[50px] justify-center md:pt-[50px] lg:w-full lg:h-auto lg:pt-[50px] transition-colors duration-300 ${darkMode ? 'bg-[#2A262B]' : 'bg-[#F4F4F4]'}`}>
       <img
-        src="./src/images/hero-rectangle-two.png"
+        src="/images/hero-rectangle-two.png"
         alt="background-decoration"
         className="absolute hidden lg:block right-[-45px] top-[600px] w-[217px] h-[59px] z-0 object-contain"
       />
       <img
-        src="./src/images/hollow-circle.png"
+        src="/images/hollow-circle.png"
         alt="background-decoration"
         className="absolute hidden lg:block right-[520px] top-[700px] w-[121px] h-[121px] z-0 object-contain"
       />
@@ -25,7 +25,7 @@ function Hero() {
         <div className='left-content w-full h-auto gap-[50px] flex flex-col order-last items-center lg:items-start lg:order-first lg:w-full lg:max-w-[666px] lg:h-auto lg:gap-[50px]'>
           <div className='left-content-top flex flex-col gap-[15px] lg:gap-[30px] '>
             <img
-              src="./src/images/hero-rectangle-one.png"
+              src="/images/hero-rectangle-one.png"
               alt="background-decoration"
               className="absolute hidden lg:block left-95 top-[243px] w-[148px] h-[31px] z-0 object-contain"
             />
@@ -84,7 +84,7 @@ function Hero() {
           <div className={`absolute top-0 left-0 w-[341px] h-[341px] rounded-[22px] transition-colors ${darkMode ? 'bg-[#E92577]' : 'bg-[#E92577]'}`}></div>
           <img
             className="absolute bottom-0 right-0 w-[341px] h-[341px] rounded-[22px]"
-            src="./src/images/selfpic.png"
+            src="/images/selfpic.png"
             alt="self-picture"
           />
         </div>
