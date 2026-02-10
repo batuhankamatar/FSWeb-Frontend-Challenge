@@ -9,15 +9,22 @@ function Skills() {
   const skillsContent = data[language].skills;
 
   return (
-    <section className={`skills-container flex flex-col items-center lg:w-full lg:h-[490px] transition-colors duration-300 ${darkMode ? 'bg-[#2A2A2A]' : 'bg-white'}`}>
+    <section className={`skills-container flex flex-col items-center lg:w-full lg:h-[490px] transition-colors duration-300 ${darkMode ? 'bg-[#484148]' : 'bg-white'}`}>
+      <img
+        src="./src/images/skills-rectangle.png"
+        alt="background-decoration"
+        className="absolute hidden lg:block left-[-45px] top-[1150px] w-[181px] h-[49px] z-0 object-contain"
+      />
+      <img
+        src="./src/images/hollow-circle-pink.png"
+        alt="background-decoration"
+        className="absolute hidden lg:block right-[-25px] top-[1200px] w-[121px] h-[121px] z-0 object-contain"
+      />
       <nav className='skills-content flex items-center flex-col pt-[50px] lg:flex-col lg:w-full lg:max-w-[942px] lg-h-auto lg:pt-[80px] lg:pb-[130px]'>
-
-        <h1 className={`font-Inter font-[500] text-[48px] ${darkMode ? 'text-[#AEBCCF]' : 'text-[#0A0A14]'}`}>
+        <h1 className={`font-Inter font-[500] text-[48px] ${darkMode ? 'text-[#F4F4F4]' : 'text-[#0A0A14]'}`}>
           {skillsContent.title}
         </h1>
-
         <div className='skills flex w-full max-w-[327px] h-auto pt-[50px] pb-[50px] flex-wrap justify-between gap-y-[35px] lg:flex-row lg:flex-nowrap lg:w-full lg:max-w-[942px] lg-h-auto lg:gap-[35px] '>
-
           {skillsContent.list.map((skill, index) => (
             <div key={index} className='skill-box flex flex-col gap-[10px] lg:flex-col lg:w-[146px] lg:h-[166px] lg:gap-[10px] lg:items-center'>
               <img
@@ -30,7 +37,6 @@ function Skills() {
               </h2>
             </div>
           ))}
-
         </div>
       </nav>
     </section>

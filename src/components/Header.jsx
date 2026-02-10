@@ -31,8 +31,13 @@ function Header() {
   };
 
   return (
-    <header className={`header-container flex flex-row w-full h-auto justify-end py-8 transition-colors duration-300 ${darkMode ? 'bg-[#2A2A2A]' : 'bg-[#F4F4F4]'}`}>
-      <div className="header-content-wrapper flex flex-row w-full max-w-[359px] ml-auto mr-0 items-center gap-[14px]">
+    <header className={`header-container flex flex-row w-full h-auto py-8 justify-end transition-colors duration-300 ${darkMode ? 'bg-[#2A262B]' : 'bg-[#F4F4F4]'}`}>
+      <img
+        src="./src/images/header-circle.png"
+        alt="header-desktop-img"
+        className="hidden lg:block absolute w-[111px] h-[111px] object-contain left-[600px] top-[-40px]"
+      />
+      <div className="header-content-wrapper flex flex-row w-full max-w-max items-center gap-[14px] px-4">
         <div className="mode-switch-container flex items-center gap-[4px]">
           <input
             type="checkbox"
@@ -43,9 +48,14 @@ function Header() {
           />
           <label
             htmlFor="darkModeToggle"
-            className={`mode-switch-label w-[55px] h-[24px] rounded-full relative cursor-pointer flex items-center transition-colors duration-300 ${darkMode ? 'bg-[#3A3A3A]' : 'bg-[#E92577]'}`}
+            className={`mode-switch-label w-[55px] h-[24px] rounded-full relative cursor-pointer flex items-center transition-colors duration-300 ${darkMode ? 'bg-[#000000]' : 'bg-[#E92577]'}`}
           >
-            <div className={`mode-switch-circle absolute w-[16px] h-[16px] ml-[4.4px] rounded-full transition-all duration-300 ${darkMode ? 'translate-x-[30px] bg-[#FFE86E]' : 'translate-x-0 bg-[#FFE86E]'}`}></div>
+            <div className={`mode-switch-circle absolute w-[16px] h-[16px] ml-[4.4px] rounded-full transition-all duration-300 
+            ${darkMode
+                ? 'translate-x-[30px] bg-transparent shadow-[inset_-5px_-1px_0_0_#FFE86E]'
+                : 'translate-x-0 bg-[#FFE86E]'
+              }`}
+            ></div>
           </label>
           <span className={`font-Inter font-[700] text-[15px] ${darkMode ? 'text-[#D9D9D9]' : 'text-[#777777]'}`}>
             {darkMode ? content.header.lightMode : content.header.darkMode}
@@ -55,17 +65,6 @@ function Header() {
         <div className="language-container font-Inter font-[700] text-[15px]">
           {language === 'tr' ? (
             <p className={`language-text ${darkMode ? 'text-[#D9D9D9]' : 'text-[#777777]'}`}>
-              <span
-                onClick={toggleLanguage}
-                role="button"
-                className={`language-button font-Inter font-[700] text-[15px] cursor-pointer ${darkMode ? 'text-[#B7AAFF]' : 'text-[#E92577]'}`}
-              >
-                TÜRKÇE
-              </span>
-              'YE GEÇ
-            </p>
-          ) : (
-            <p className={`language-text ${darkMode ? 'text-[#D9D9D9]' : 'text-[#777777]'}`}>
               SWITCH TO{" "}
               <span
                 onClick={toggleLanguage}
@@ -74,6 +73,17 @@ function Header() {
               >
                 ENGLISH
               </span>
+            </p>
+          ) : (
+            <p className={`language-text ${darkMode ? 'text-[#D9D9D9]' : 'text-[#777777]'}`}>
+              <span
+                onClick={toggleLanguage}
+                role="button"
+                className={`language-button font-Inter font-[700] text-[15px] cursor-pointer ${darkMode ? 'text-[#B7AAFF]' : 'text-[#E92577]'}`}
+              >
+                TÜRKÇE
+              </span>
+              'YE GEÇ
             </p>
           )}
         </div>

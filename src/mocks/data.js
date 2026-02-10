@@ -21,7 +21,21 @@ export const data = {
         for: " ve ",
         project: "Kullanıcı Deneyimi",
         invite: " odaklı projeler geliştiriyorum. Beni ekibinize davet etmek isterseniz: ",
-        email: "kamatar3@gmail.com"
+        email: "kamatar3@gmail.com",
+        links: [
+          {
+            name: "linkedin",
+            url: "https://www.linkedin.com/in/batuhan-kamatar-6a78641ba/",
+            img: "./src/images/linkedIn.png",
+            imgDark: "./src/images/linkedIn-dark.png"
+          },
+          {
+            name: "github",
+            url: "https://github.com/batuhankamatar",
+            img: "./src/images/github.png",
+            imgDark: "./src/images/github-dark.png"
+          }
+        ]
       }
     },
     skills: {
@@ -60,26 +74,43 @@ export const data = {
           githubLink: "#",
           appLink: "#",
           bgColor: "bg-[#DDEEFE]",
+          darkBgColor: "bg-[#2D3235]",
           image: "/src/images/project-one.png"
         },
         {
-          title: "Teknolojik Yemekler",
-          description: "Dinamik form yönetimi ve gerçek zamanlı doğrulama içeren kapsamlı bir yemek sipariş uygulaması. Pizza özelleştirmeleri için karmaşık state yönetimini gerçekleştirmek ve sipariş işlemleri için API entegrasyonu sunmak amacıyla geliştirilmiştir.",
-          technologies: ["react", "axios", "router", "tailwind", "cypress"],
-          githubLink: "#",
-          appLink: "#",
-          bgColor: "bg-[#DDEEFE]",
-          image: "/src/images/project-one.png"
-        },
+          title: "Movie Database v3",
+          description: "Eski bir film veri tabanı uygulamasının modern isterlerle yeniden inşa edilmiş versiyonu. CRUD operasyonları, dinamik form yönetimi, favorilere ekleme sistemi ve local storage destekli kapsamlı bir yönetim paneli projesi.",
+          technologies: ["React", "Redux", "Axios", "Router", "LocalStorage"],
+          githubLink: "#", // Burayı sonra doldurabilirsin
+          appLink: "#",    // Burayı sonra doldurabilirsin
+          bgColor: "bg-[#D9F6F1]",
+          darkBgColor: "bg-[#495351]",
+          image: "/src/images/project-two.png"
+        }
         // Diğer projeler buraya eklenecek
       ]
     },
     footer: {
       message: "Bir sonraki projeniz üstünde birlikte çalışalım.",
       links: [
-        { name: "Github", url: "https://github.com/...", color: "text-[#171043]" },
-        { name: "Linkedin", url: "https://linkedin.com/...", color: "text-[#0077B5]" },
-        { name: "E-posta", url: "mailto:ismin@domain.com", color: "text-[#AF0C48]" }
+        {
+          name: "Github",
+          url: "https://github.com/batuhankamatar",
+          color: "text-[#1769FF]",
+          darkColor: "text-[#82BBFF]"
+        },
+        {
+          name: "Linkedin",
+          url: "https://www.linkedin.com/in/batuhan-kamatar-6a78641ba/",
+          color: "text-[#0077B5]",
+          darkColor: "text-[#419CCB]"
+        },
+        {
+          name: "Email",
+          url: "mailto:kamatar3@gmail.com",
+          color: "text-[#AF0C48]",
+          darkColor: "text-[#EA2678]"
+        }
       ]
     }
   },
@@ -105,7 +136,21 @@ export const data = {
         for: " and ",
         project: "User Experience.",
         invite: "If you'd like to invite me to your team: ",
-        email: "kamatar3@gmail.com"
+        email: "kamatar3@gmail.com",
+        links: [
+          {
+            name: "linkedin",
+            url: "https://www.linkedin.com/in/batuhan-kamatar-6a78641ba/",
+            img: "./src/images/linkedIn.png",
+            imgDark: "./src/images/linkedIn-dark.png"
+          },
+          {
+            name: "github",
+            url: "https://github.com/batuhankamatar",
+            img: "./src/images/github.png",
+            imgDark: "./src/images/github-dark.png"
+          }
+        ]
       }
     },
     skills: {
@@ -144,26 +189,43 @@ export const data = {
           githubLink: "#",
           appLink: "#",
           bgColor: "bg-[#DDEEFE]",
+          darkBgColor: "bg-[#2D3235]",
           image: "/src/images/project-one.png"
         },
         {
-          title: "Pizza Planet",
-          description: "A comprehensive food delivery application featuring a dynamic order form with real-time validation. Built to handle complex state management for pizza customizations and integrated with a mock API for order processing.",
-          technologies: ["react", "axios", "router", "tailwind", "cypress"],
+          title: "Movie Database v3",
+          description: "A modernized version of a legacy movie database application. Features full CRUD operations, dynamic form handling for adding and editing movies, a favorite management system, and custom hook-based dark mode persistence with local storage.",
+          technologies: ["React", "Redux", "Axios", "Router", "LocalStorage"],
           githubLink: "#",
           appLink: "#",
-          bgColor: "bg-[#DDEEFE]",
-          image: "/src/images/project-one.png"
-        },
+          bgColor: "bg-[#D9F6F1]",
+          darkBgColor: "bg-[#495351]",
+          image: "/src/images/project-two.png"
+        }
         // Diğer projeler buraya
       ]
     },
     footer: {
       message: "Let’s work together on your next product.",
       links: [
-        { name: "Github", url: "https://github.com/...", color: "text-[#171043]" },
-        { name: "Linkedin", url: "https://linkedin.com/...", color: "text-[#0077B5]" },
-        { name: "Email", url: "mailto:ismin@domain.com", color: "text-[#AF0C48]" }
+        {
+          name: "Github",
+          url: "https://github.com/batuhankamatar",
+          color: "text-[#1769FF]",
+          darkColor: "text-[#82BBFF]"
+        },
+        {
+          name: "Linkedin",
+          url: "https://www.linkedin.com/in/batuhan-kamatar-6a78641ba/",
+          color: "text-[#0077B5]",
+          darkColor: "text-[#419CCB]"
+        },
+        {
+          name: "Email",
+          url: "mailto:kamatar3@gmail.com",
+          color: "text-[#AF0C48]",
+          darkColor: "text-[#EA2678]"
+        }
       ]
     },
   }

@@ -68,7 +68,7 @@ function App() {
         position="bottom-right"
         autoClose={2000}
         theme={darkMode ? 'dark' : 'light'}
-        hideProgressBar={true}
+        hideProgressBar={false}
       />
     </div>
   );

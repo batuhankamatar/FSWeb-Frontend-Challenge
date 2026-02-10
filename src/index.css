@@ -6,3 +6,18 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+.Toastify__progress-bar {
+  background: linear-gradient(to right,
+      #4158D0,
+      #C850C0,
+      #FFCC70) !important;
+
+  height: 4px !important;
+}
+
+.dark .Toastify__progress-bar {
+  background: linear-gradient(to right,
+      #00DBDE,
+      #FC00FF) !important;
+}
