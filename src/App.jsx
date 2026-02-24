@@ -26,21 +26,12 @@ function App() {
     dispatch({ type: 'TOGGLE_DARK_MODE', payload: savedDarkMode });
     dispatch({ type: 'FETCH_START' });
 
-    axios({
-      method: 'post',
-      url: 'https://reqres.in/api/workintech',
-      data: localData,
-      headers: {
-        'x-api-key': 'reqres_dd64f34d6b8a4d2a80e77d4c9d2f60af'
-      }
-    })
-      .then(response => {
-        console.log("API'den Gelen Yanıt (Simülasyon Başarılı):", response.data);
+    setTimeout(() => {
+      dispatch({ type: 'FETCH_SUCCESS', payload: localData });
+      toast(savedLang === 'tr' ? '🚀 Veriler başarıyla yüklendi!' : '🚀 Data loaded successfully!');
+    }, 800);
 
-        dispatch({ type: 'FETCH_SUCCESS', payload: response.data });
-        toast(savedLang === 'tr' ? '🚀 Hoş geldiniz!' : '🚀 Welcome back!');
-      })
-  }, []);
+  }, [dispatch, savedLang, savedDarkMode]);
 
   useEffect(() => {
     if (darkMode) {

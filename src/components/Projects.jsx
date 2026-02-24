@@ -19,7 +19,7 @@ function Projects() {
             <div
               key={index}
               className={`project-card relative flex flex-col w-full max-w-[500px] h-[668px] pt-[46px] rounded-[12px] transition-colors duration-300
-    ${darkMode ? project.darkBgColor : project.bgColor}`}
+                ${darkMode ? project.darkBgColor : project.bgColor}`}
             >
               <div className="pl-[40px]">
                 <h4 className={`font-['Playfair_Display'] font-[700] text-[29px] ${darkMode ? 'text-[#FFFFFF]' : 'text-[#0A0A14]'}`}>
